@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -7,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'purple': '#5B21B6',
+        'blue': '#081529'
+       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -14,5 +19,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+   plugins: [require("daisyui")],
+   daisyui: {
+    base: false,
+    darkTheme: "light",
+  }
 }
