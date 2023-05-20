@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.swiper-pagination > .swiper-pagination-bullet {
+  opacity: 1;
+  border: white solid 2px;
+  background-color: transparent;
+  padding: 4px;
+}
+.swiper-pagination > .swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+.contact {
+  background-image: url(/portofolio/public/IrM.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
