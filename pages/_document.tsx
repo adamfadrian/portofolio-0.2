@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <link rel="icon" type="image/svg+xml" href="/davekoz.png" />
+      <link rel="icon" type="image/svg+xml" href="/portologo.png" />
       <title>Adam Fadrian</title>
       <body>
         <Main />

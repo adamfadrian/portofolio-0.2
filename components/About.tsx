@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Layout from './Layout'
 import Image from 'next/image'
-import davekoz from '@/public/selfthought.png'
+import davekoz from '@/public/selftaut.png'
 import Link from 'next/link'
 import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs'
 import { AnimatePresence, motion, useAnimation } from 'framer-motion'
@@ -38,8 +38,9 @@ const About = () => {
 
     return (
         <motion.div className='flex w-full' >
-            <motion.div className='container md:mx-auto grid grid-cols-1 md:grid-cols-2 justify-around 2xl:gap-5 mx-5  xl:p-5 xl:gap-5'
+            <motion.div className='container md:mx-auto p-5 grid grid-cols-1 md:grid-cols-2 justify-around 2xl:gap-5 mx-5 xl:p-5 xl:gap-5'
                 ref={ref}
+                id='About'
             >
                 <motion.div className='text-white ' animate={animationLeft}
                 >
@@ -59,15 +60,15 @@ const About = () => {
                         },
                     }}>
                     <motion.div className='flex flex-col 2xl:mx-auto items-center gap-1' variants={FADE_DOWN_ANIMATION_VARIANTS}>
-                        <h1 className='2xl:text-5xl lg:text-4xl text-3xl font-semibold '>Adam Fadrian</h1>
-                        <h1 className='md:text-lg text-md font-medium'>Frontend Web Developer</h1>
+                        <h1 className='2xl:text-5xl lg:text-4xl text-3xl font-semibold kalam'>Adam Fadrian</h1>
+                        <h1 className='md:text-xl text-md font-medium kalam'>Frontend Web Developer</h1>
                     </motion.div>
                     <motion.div className='flex items-center' variants={FADE_DOWN_ANIMATION_VARIANTS}>
-                        <p className='2xl:text-md md:text-sm text-sm'>I began learning HTML and JavaScript on my own through FreeCodeCamp in 2019.
+                        <p className='text-sm 2xl:text-lg pangolin'>I began learning HTML and JavaScript on my own through FreeCodeCamp in 2019.
                             However, I faced many obstacles along the way and found myself getting stuck frequently. Despite these challenges, I continued to learn through self-teaching and practice until I joined Alterra Academy&apos;s bootcamp. where I learned React and TypeScript in addition to HTML and JavaScript. During my time there, my skills grew rapidly, and I worked on several inmotion.dividual and collaborative projects that further honed my abilities. Currently, I am seeking a Frontend Engineer position with a company where I can utilize my skills and continue to develop both professionally and personally.</p>
                     </motion.div>
                     <motion.div className='flex' variants={FADE_DOWN_ANIMATION_VARIANTS}>
-                        <h1 className='mr-4 md:text-xl font-medium'>Check out my</h1>
+                        <h1 className='mr-4 md:text-xl font-medium kalam'>Check out my</h1>
                         <motion.div className="grid grid-flow-col gap-3 dark:text-white" >
                             <Link target='_blank' href={'https://www.instagram.com/adamfadrian/'} className='hover:scale-125' >
                                 <BsInstagram size={25} />

@@ -87,7 +87,7 @@ const Contacts = () => {
   return (
     <div className='flex flex-col mt-20 p-5 ' id='Contacts' style={{backgroundImage : `url(${bg})`, backgroundSize: 'cover'}}>
       <div className='flex flex-col items-center' ref={ref}>
-        <h1 className='flex lg:text-4xl text-2xl font-bold mx-auto mb-10 text-white' data-aos="slide-up" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom">C O N T A C T</h1>
+        <h1 className='flex lg:text-4xl text-2xl font-bold mx-auto mb-10 text-white kalam' data-aos="slide-up" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom">C O N T A C T</h1>
         <div className='flex flex-col justify-center items-center gap-3 mb-10 text-white'>
           <h1 className='text-xl font-semibold text-center' data-aos="fade-right" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom">I have got just what you need. Lets Talk.</h1>
           <h1 className='flex text-center items-center gap-3 font-medium text-lg ' data-aos="fade-left" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom"><FaPhoneAlt /> +6281399817946</h1>
@@ -96,15 +96,15 @@ const Contacts = () => {
         </div>
         <div>
           <form ref={form} onSubmit={sendEmail} className='flex flex-col mx-auto 2xl:w-[600px] gap-5 mb-20 p-5 border-white border-color1 border rounded-lg' data-aos='zoom-out'>
-            <h1 className='flex mx-auto text-2xl text-white font-semibold 2xl:mb-10'>Contact Form</h1>
+            <h1 className='flex mx-auto text-2xl text-white font-semibold 2xl:mb-10 kalam'>Contact Form</h1>
             <div className='flex gap-2'>
               <div className='w-full'>
                 <h1 className=' font-semibold text-lg  text-white mb-2' data-aos="fade-up-left" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom">Your Name</h1>
-                <input className='input input-bordered input-primary w-full  mt-1' required type="text" name="user_name" defaultValue='' placeholder='adam fadrian' data-aos="fade-up-right" data-aos-duration="700" data-aos-anchor-placement="bottom-bottom" />
+                <input className='input input-bordered input-primary w-full  mt-1' required type="text" name="user_name" defaultValue='' placeholder='John Doe' data-aos="fade-up-right" data-aos-duration="700" data-aos-anchor-placement="bottom-bottom" />
               </div>
               <div className='w-full'>
                 <h1 className=' font-semibold text-lg  text-white mb-2' data-aos="fade-up-right" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom">Company Name</h1>
-                <input className='input input-bordered input-primary w-full  mt-1' type="text" name="company_name" defaultValue='' placeholder='company name' data-aos="fade-up-left" data-aos-duration="700" data-aos-anchor-placement="bottom-bottom" />
+                <input className='input input-bordered input-primary w-full  mt-1' type="text" name="company_name" defaultValue='' placeholder='Company name' data-aos="fade-up-left" data-aos-duration="700" data-aos-anchor-placement="bottom-bottom" />
               </div>
             </div>
             <div className='flex flex-col'>
