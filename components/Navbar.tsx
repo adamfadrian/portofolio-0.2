@@ -1,6 +1,4 @@
 import React, { useState, FC, useEffect } from 'react'
-import Image from 'next/image'
-import davekoz from '@/public/portologo.png'
 import { motion } from 'framer-motion'
 import { TbDownload } from 'react-icons/tb'
 import { BOUNCING_ANIMATION_VARIANTS } from '@/constant/animation'

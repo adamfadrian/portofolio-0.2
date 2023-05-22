@@ -9,10 +9,6 @@ import { useInView } from 'react-intersection-observer';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 
-import Image from 'next/image';
-
-import bg from '@/public/IrM.gif';
-
 const Contacts = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const animate = useAnimation();
@@ -53,16 +49,7 @@ const Contacts = () => {
     try {
       const res = await emailjs.sendForm(service, templateId, form.current, publicKey);
       if (res) {
-        toast.success('Your message has been sent successfully!', {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
+        toast.success('Your message has been sent successfully!');
       }
       setLoading(false);
       form.current.reset();
@@ -70,22 +57,12 @@ const Contacts = () => {
       document.querySelectorAll('textarea').forEach(i => (i.value = ''));
     } catch (error) {
       if (error) {
-        toast.error('There was an error sending your message. Please try again later.', {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
+        toast.error('There was an error sending your message. Please try again later.');
       }
     }
   };
-
   return (
-    <div className='flex flex-col mt-20 p-5 ' id='Contacts' style={{backgroundImage : `url(${bg})`, backgroundSize: 'cover'}}>
+    <div className='flex flex-col mt-20 p-5 ' id='Contacts' >
       <div className='flex flex-col items-center' ref={ref}>
         <h1 className='flex lg:text-4xl text-2xl font-bold mx-auto mb-10 text-white kalam' data-aos="slide-up" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom">C O N T A C T</h1>
         <div className='flex flex-col justify-center items-center gap-3 mb-10 text-white'>

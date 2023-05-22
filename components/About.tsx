@@ -4,15 +4,13 @@ import Image from 'next/image'
 import davekoz from '@/public/selftaut.png'
 import Link from 'next/link'
 import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs'
-import { AnimatePresence, motion, useAnimation } from 'framer-motion'
+import {  motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 import { FADE_DOWN_ANIMATION_VARIANTS } from '@/constant/animation'
-
 
 const About = () => {
     const animationLeft = useAnimation();
     const { ref, inView } = useInView();
-    const animationRight = useAnimation()
 
     useEffect(() => {
         if (inView) {
@@ -31,10 +29,6 @@ const About = () => {
             })
         }
     }, [inView, animationLeft])
-
-
-
-
 
     return (
         <motion.div className='flex w-full' >

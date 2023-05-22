@@ -1,8 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import bg from '@/public/IrM.gif'
 import Lapak from '@/public/Lapak.png'
-import Web from '@/public/globe.svg'
 import { BsBrowserChrome, BsGithub } from 'react-icons/bs'
 import dashboard from '@/public/dashboard.png'
 import escapist from '@/public/escapist.png'
@@ -19,7 +17,7 @@ const Projects = () => {
         <div className='grid grid-cols-1 md:grid-cols-2  gap-20 '>
           <div className='w-full  flex justify-center ' data-aos="fade-right" data-aos-duration="600" data-aos-anchor-placement="center-bottom">
             <Link href={"https://lapakumkm.netlify.app/"} target='_blank'>
-              <Image className='rounded-md hover:cursor-pointer ' src={Lapak} alt='Lapak-UMKM' width={500} height={500} />
+              <Image className='rounded-md hover:cursor-pointer ' src={Lapak} alt='Lapak-UMKM' width={500} height={500} priority={true} />
             </Link>
           </div>
           <div className='flex flex-col w-full  px-5 gap-5 justify-center'>
@@ -67,7 +65,7 @@ const Projects = () => {
           </div>
           <div className='w-full  flex justify-center' data-aos="fade-left" data-aos-duration="600" data-aos-anchor-placement="center-bottom">
             <Link href={'https://escapist-app.netlify.app/'} target='_blank'>
-              <Image className='rounded-md hover:cursor-pointer' src={escapist} alt='escapist' width={500} height={500} />
+              <Image className='rounded-md hover:cursor-pointer' src={escapist} alt='escapist' width={500} height={500} priority={true} />
             </Link>
           </div>
         </div>
@@ -77,7 +75,7 @@ const Projects = () => {
         <div className='grid grid-cols-1 md:grid-cols-2  gap-20'>
           <div className='w-full  flex justify-center' data-aos="fade-right" data-aos-duration="600" data-aos-anchor-placement="center-bottom">
             <Link href={'https://alta-dashboard-immersive.vercel.app/'} target='_blank'>
-              <Image className='rounded-md hover:cursor-pointer' src={dashboard} alt='Dashboard' width={500} height={500} />
+              <Image className='rounded-md hover:cursor-pointer' src={dashboard} alt='Dashboard' width={500} height={500} priority={true} />
             </Link>
           </div>
           <div className='flex flex-col w-full  px-5 gap-5 justify-center'>
@@ -124,7 +122,7 @@ const Projects = () => {
           </div>
           <div className='w-full  flex justify-center' data-aos="fade-left" data-aos-duration="600" data-aos-anchor-placement="center-bottom">
             <Link href={'https://mymovie-app-sable.vercel.app'} target='_blank'>
-              <Image className='rounded-md hover:cursor-pointer' src={movie} alt='movieApp' width={500} height={500} />
+              <Image className='rounded-md hover:cursor-pointer' src={movie} alt='movieApp' width={500} height={500} priority={true} />
             </Link>
           </div>
         </div>

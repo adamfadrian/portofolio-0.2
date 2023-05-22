@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { skills } from '@/utils/_data/_skills'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination, Scrollbar } from 'swiper';
+import { Autoplay,Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import AOS from 'aos'
 
 const Skills = () => {
-    useEffect(() => {
-        AOS.init()
-    })
     const swiperParams = {
         loop: true,
         modules: [Pagination, Autoplay],
@@ -33,8 +29,8 @@ const Skills = () => {
                 spaceBetween: 40
             }
         },
-        onSlideChange: () => console.log('slide change'),
-        onSwiper: (swiper: any) => console.log(swiper),
+        // onSlideChange: () => console.log('slide change'),
+        // onSwiper: (swiper: any) => console.log(swiper),
     };
 
     return (
