@@ -29,26 +29,26 @@ const Navbar: FC<Props> = ({ onClick }) => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         exit={{ y: -100 }}
-        transition={{ duration: 0.8, ease: 'easeInOut' }} className={`navbar 2xl:px-44 md:px-20 transition duration-700 z-50 items-center sticky top-0 ${isScrolled ? 'bg-purple' : 'bg-transparent'
+        transition={{ duration: 0.6, ease: 'easeInOut' }} className={`navbar 2xl:px-44 md:px-20 transition duration-700 z-50 items-center sticky top-0 ${isScrolled ? 'bg-purple' : 'bg-transparent'
           }`} >
         <motion.div className="navbar-start">
-          <a href='' className="btn btn-ghost normal-case text-xl"><span className=" text-2xl font-semibold whitespace-nowrap dark:text-white text-black kalam">Adam Fadrian</span></a>
+          <a href='' className="btn btn-ghost normal-case text-xl"><span className=" text-2xl font-semibold whitespace-nowrap dark:text-white text-black playfair">Adam Fadrian</span></a>
         </motion.div>
         <motion.div className="navbar-center hidden lg:flex">
           <motion.ul className='flex gap-10 '>
             <motion.li>
               <a href="#About">
-                <h1 className='text-xl text-white font-semibold kalam'>About</h1>
+                <h1 className='text-xl text-white font-semibold playfair'>About</h1>
               </a>
             </motion.li>
             <motion.li>
               <a href="#Projects">
-                <h1 className='text-xl text-white font-semibold kalam'>project</h1>
+                <h1 className='text-xl text-white font-semibold playfair'>project</h1>
               </a>
             </motion.li>
             <motion.li>
               <a href="#Contacts">
-                <h1 className='text-xl text-white font-semibold kalam'>contact</h1>
+                <h1 className='text-xl text-white font-semibold playfair'>contact</h1>
               </a>
             </motion.li>
           </motion.ul>

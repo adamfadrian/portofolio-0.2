@@ -9,8 +9,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        purple: "#5B21B6",
-        blue: "#081529",
+        purple: "#132f4c",
+        blue: "#001E3C",
+        purple2: "#132f4c",
       },
       backgroundImage: {
         bg: "url('/portofolio/public/IrM.gif')",

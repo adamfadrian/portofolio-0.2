@@ -54,15 +54,15 @@ const About = () => {
                         },
                     }}>
                     <motion.div className='flex flex-col 2xl:mx-auto items-center gap-1' variants={FADE_DOWN_ANIMATION_VARIANTS}>
-                        <h1 className='2xl:text-5xl lg:text-4xl text-3xl font-semibold kalam'>Adam Fadrian</h1>
-                        <h1 className='md:text-xl text-md font-medium kalam'>Frontend Web Developer</h1>
+                        <h1 className='2xl:text-5xl lg:text-4xl text-3xl font-semibold playfair'>Adam Fadrian</h1>
+                        <h1 className='md:text-xl text-md font-medium playfair'>Frontend Web Developer</h1>
                     </motion.div>
                     <motion.div className='flex items-center' variants={FADE_DOWN_ANIMATION_VARIANTS}>
-                        <p className='text-sm 2xl:text-lg pangolin'>I began learning HTML and JavaScript on my own through FreeCodeCamp in 2019.
+                        <p className='text-sm 2xl:text-lg lato'>I began learning HTML and JavaScript on my own through FreeCodeCamp in 2019.
                             However, I faced many obstacles along the way and found myself getting stuck frequently. Despite these challenges, I continued to learn through self-teaching and practice until I joined Alterra Academy&apos;s bootcamp. where I learned React and TypeScript in addition to HTML and JavaScript. During my time there, my skills grew rapidly, and I worked on several inmotion.dividual and collaborative projects that further honed my abilities. Currently, I am seeking a Frontend Engineer position with a company where I can utilize my skills and continue to develop both professionally and personally.</p>
                     </motion.div>
                     <motion.div className='flex' variants={FADE_DOWN_ANIMATION_VARIANTS}>
-                        <h1 className='mr-4 md:text-xl font-medium kalam'>Check out my</h1>
+                        <h1 className='mr-4 md:text-xl font-medium lato'>Check out my</h1>
                         <motion.div className="grid grid-flow-col gap-3 dark:text-white" >
                             <Link target='_blank' href={'https://www.instagram.com/adamfadrian/'} className='hover:scale-125' >
                                 <BsInstagram size={25} />

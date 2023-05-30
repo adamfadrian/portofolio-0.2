@@ -64,7 +64,7 @@ const Contacts = () => {
   return (
     <div className='flex flex-col mt-20 p-5 ' id='Contacts' >
       <div className='flex flex-col items-center' ref={ref}>
-        <h1 className='flex lg:text-4xl text-2xl font-bold mx-auto mb-10 text-white kalam' data-aos="slide-up" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom">C O N T A C T</h1>
+        <h1 className='flex lg:text-4xl text-2xl font-bold mx-auto mb-10 text-white playfair' data-aos="slide-up" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom">C O N T A C T</h1>
         <div className='flex flex-col justify-center items-center gap-3 mb-10 text-white'>
           <h1 className='text-xl font-semibold text-center' data-aos="fade-right" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom">I have got just what you need. Lets Talk.</h1>
           <h1 className='flex text-center items-center gap-3 font-medium text-lg ' data-aos="fade-left" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom"><FaPhoneAlt /> +6281399817946</h1>
@@ -73,7 +73,7 @@ const Contacts = () => {
         </div>
         <div>
           <form ref={form} onSubmit={sendEmail} className='flex flex-col mx-auto 2xl:w-[600px] gap-5 mb-20 p-5 border-white border-color1 border rounded-lg' data-aos='zoom-out'>
-            <h1 className='flex mx-auto text-2xl text-white font-semibold 2xl:mb-10 kalam'>Contact Form</h1>
+            <h1 className='flex mx-auto text-2xl text-white font-semibold 2xl:mb-10 lato'>Contact Form</h1>
             <div className='flex gap-2'>
               <div className='w-full'>
                 <h1 className=' font-semibold text-lg  text-white mb-2' data-aos="fade-up-left" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom">Your Name</h1>
@@ -97,7 +97,7 @@ const Contacts = () => {
               disabled={loading}
               type="submit"
               value="Send"
-              className='btn bg-purple hover:bg-purple rounded-lg  mx-auto text-white border-none btn-wide text-lg gap-2 mb-5 hover:border-none  hover:scale-110'>
+              className='btn btn-md btn-wide mx-auto bg-transparent border border-white hover:bg-transparent hover:border-slate-500 gap-1'>
               {loading && <Loading />}
               Send <BsSend />
             </button>

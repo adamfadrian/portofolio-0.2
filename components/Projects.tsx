@@ -10,14 +10,14 @@ import Link from 'next/link'
 const Projects = () => {
   return (
     <div className='flex flex-col gap-32 p-5 mt-60' id='Projects'>
-      <h1 className='text-5xl font-bold text-white mx-auto kalam'>Projects</h1>
+      <h1 className='text-5xl font-bold text-white mx-auto playfair'>Projects</h1>
 
       {/* Lapak-UMKM */}
-      <div className='container w-full h-full mx-auto bg-purple rounded-xl p-5 overflow-hidden' data-aos='zoom-in' data-aos-duration='500'>
+      <div className='container w-full h-full mx-auto bg-purple2 rounded-xl p-10 overflow-hidden' data-aos='zoom-in' data-aos-duration='500'>
         <div className='grid grid-cols-1 md:grid-cols-2  gap-20 '>
-          <div className='w-full  flex justify-center ' data-aos="fade-right" data-aos-duration="600" data-aos-anchor-placement="center-bottom">
+          <div className='w-full  flex justify-center h-full items-center' data-aos="fade-right" data-aos-duration="600" data-aos-anchor-placement="center-bottom">
             <Link href={"https://lapakumkm.netlify.app/"} target='_blank'>
-              <Image className='rounded-md hover:cursor-pointer ' src={Lapak} alt='Lapak-UMKM' width={500} height={500} priority={true} />
+              <Image className='rounded-md hover:cursor-pointer' src={Lapak} alt='Lapak-UMKM' width={500} height={500} priority={true} />
             </Link>
           </div>
           <div className='flex flex-col w-full  px-5 gap-5 justify-center'>
@@ -43,7 +43,7 @@ const Projects = () => {
 
       {/* Escapist-App */}
 
-      <div className='container w-full h-full mx-auto bg-purple rounded-xl p-5' data-aos='zoom-in' data-aos-duration='500'>
+      <div className='container w-full h-full mx-auto bg-purple2 rounded-xl p-10' data-aos='zoom-in' data-aos-duration='500'>
         <div className='grid grid-cols-1 md:grid-cols-2  gap-20'>
           <div className='flex flex-col w-full  px-5 gap-5 justify-center'>
             <h1 className='text-4xl text-white font-bold' data-aos='fade-right' data-aos-duration='600' data-aos-anchor-placement="bottom-bottom">Escapist</h1>
@@ -63,17 +63,18 @@ const Projects = () => {
               </div>
             </div>
           </div>
-          <div className='w-full  flex justify-center' data-aos="fade-left" data-aos-duration="600" data-aos-anchor-placement="center-bottom">
+          <div className='w-full h-full items-center  flex justify-center' data-aos="fade-left" data-aos-duration="600" data-aos-anchor-placement="center-bottom">
             <Link href={'https://escapist-app.netlify.app/'} target='_blank'>
               <Image className='rounded-md hover:cursor-pointer' src={escapist} alt='escapist' width={500} height={500} priority={true} />
             </Link>
           </div>
         </div>
       </div>
+
       {/* Immersive Dashboard */}
-      <div className='container w-full h-full mx-auto bg-purple rounded-xl p-5' data-aos='zoom-in' data-aos-duration='500'>
+      <div className='container w-full h-full mx-auto bg-purple2 rounded-xl p-10' data-aos='zoom-in' data-aos-duration='500'>
         <div className='grid grid-cols-1 md:grid-cols-2  gap-20'>
-          <div className='w-full  flex justify-center' data-aos="fade-right" data-aos-duration="600" data-aos-anchor-placement="center-bottom">
+          <div className='w-full h-full items-center flex justify-center' data-aos="fade-right" data-aos-duration="600" data-aos-anchor-placement="center-bottom">
             <Link href={'https://alta-dashboard-immersive.vercel.app/'} target='_blank'>
               <Image className='rounded-md hover:cursor-pointer' src={dashboard} alt='Dashboard' width={500} height={500} priority={true} />
             </Link>
@@ -100,7 +101,7 @@ const Projects = () => {
       </div>
 
       {/* Movie-App */}
-      <div className='container w-full h-full mx-auto bg-purple rounded-xl p-5' data-aos='zoom-in' data-aos-duration='500'>
+      <div className='container w-full h-full mx-auto bg-purple2 rounded-xl p-10' data-aos='zoom-in' data-aos-duration='500'>
         <div className='grid grid-cols-1 md:grid-cols-2  gap-20'>
           <div className='flex flex-col w-full  px-5 gap-5 justify-center'>
             <h1 className='text-4xl text-white font-bold' data-aos='fade-right' data-aos-duration='600' data-aos-anchor-placement="bottom-bottom">Movie App</h1>
@@ -120,7 +121,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-          <div className='w-full  flex justify-center' data-aos="fade-left" data-aos-duration="600" data-aos-anchor-placement="center-bottom">
+          <div className='w-full h-full items-center flex justify-center' data-aos="fade-left" data-aos-duration="600" data-aos-anchor-placement="center-bottom">
             <Link href={'https://mymovie-app-sable.vercel.app'} target='_blank'>
               <Image className='rounded-md hover:cursor-pointer' src={movie} alt='movieApp' width={500} height={500} priority={true} />
             </Link>

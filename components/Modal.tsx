@@ -17,7 +17,7 @@ const Modal: FC<Props> = ({ showModal = false, children, onClose }) => {
             {
                 showModal && (
                     <div className='fixed inset-0 z-50 flex items-center justify-center m-2 w-full h-full'
-                        data-aos="flip-down" data-aos-duration="1100"
+                        data-aos="flip-down" data-aos-duration="700"
                     >
                         <div className='fixed inset-0 backdrop-blur-sm' onClick={overlayClick}></div>
                         <div className='bg-white rounded-lg shadow-lg z-10 p-6'>{children}</div>

@@ -36,7 +36,7 @@ const Skills = () => {
     return (
         <div className="mt-10 mx-auto 2xl:w-8/12" >
             <div className='w-full flex mb-10'>
-                <p className='text-5xl  font-bold text-white mx-auto kalam'>Skills</p>
+                <p className='text-5xl  font-bold text-white mx-auto playfair'>Skills</p>
             </div>
             <div className="flex w-full space-x-10 relative overflow-x-auto p-5 ">
                 <Swiper
