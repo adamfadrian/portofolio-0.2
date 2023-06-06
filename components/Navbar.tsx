@@ -43,12 +43,12 @@ const Navbar: FC<Props> = ({ onClick }) => {
             </motion.li>
             <motion.li>
               <a href="#Projects">
-                <h1 className='text-xl text-white font-semibold playfair'>project</h1>
+                <h1 className='text-xl text-white font-semibold playfair'>Project</h1>
               </a>
             </motion.li>
             <motion.li>
               <a href="#Contacts">
-                <h1 className='text-xl text-white font-semibold playfair'>contact</h1>
+                <h1 className='text-xl text-white font-semibold playfair'>Contact</h1>
               </a>
             </motion.li>
           </motion.ul>
