@@ -80,7 +80,7 @@ export default function Home() {
             <h2 className='flex w-96 mx-auto text-center mt-2 text-blue'>ATS Version is for CV which ATS friendly. And Creative version for creative CV with colors.</h2>
           </div>
           <div className='flex flex-row justify-center items-center gap-4'>
-            <Link href={'https://drive.google.com/file/d/1QvzCA-bbSg5Lr44OT_9JC6eJ_duhTtJU/view?pli=1'} target='_blank' className="btn btn-outline text-white bg-purple gap-1 hover:bg-purple " >
+            <Link href={'https://drive.google.com/file/d/1Xrkb3itNoBwLz5RpoTnslwzUcXG5K2he/view?pli=1'} target='_blank' className="btn btn-outline text-white bg-purple gap-1 hover:bg-purple " >
               <span className="inline-block">
                 <motion.span
                   variants={BOUNCING_ANIMATION_VARIANTS}
