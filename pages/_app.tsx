@@ -11,11 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
       mirror: false,
       offset: 0,
       useClassNames: true,
-
-
     })
-
-
   }, []);
   return (
     <>

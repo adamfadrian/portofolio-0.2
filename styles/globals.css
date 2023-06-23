@@ -46,3 +46,7 @@
 font-family: 'Playfair', serif;
 
 }
+
+div > span {
+  font-size: larger;
+}

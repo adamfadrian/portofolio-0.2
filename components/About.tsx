@@ -4,7 +4,7 @@ import Image from 'next/image'
 import davekoz from '@/public/selftaut.png'
 import Link from 'next/link'
 import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs'
-import {  motion, useAnimation } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 import { FADE_DOWN_ANIMATION_VARIANTS } from '@/constant/animation'
 
@@ -29,16 +29,77 @@ const About = () => {
             })
         }
     }, [inView, animationLeft])
-
+    // --dark: #282C34;
+    // --darker: #17191d;
+    // --light: #abb2bf;
+    // --comment: #abb2bfaa;
+    // --lightComment: #abb2bf10;
+    // --backgroundComment: #abb2bf11;
+    // --red: #E06C75;
+    // --green: #98C379;
+    // --blue: #61AFEF;
+    // --yellow: #E5C07B;
+    // --orange: #D19A66;
+    // --purple: #C678DD;
+    // --cyan: #56B6C2;
     return (
         <motion.div className='flex w-full' >
             <motion.div className='container md:mx-auto p-5 grid grid-cols-1 md:grid-cols-2 justify-around 2xl:gap-5 mx-5 xl:p-5 xl:gap-5'
                 ref={ref}
                 id='About'
             >
-                <motion.div className='text-white ' animate={animationLeft}
+                <motion.div className='text-white text-2xl flex flex-col px-20 justify-center gap-5' animate={animationLeft}
                 >
-                    <Image className='object-fill' src={davekoz} alt="Adam Fadrian" />
+                    <div>
+                        <span className='hover:bg-lightComment cursor-pointer px-2'>
+                            <span className='text-ungu ml-1 '>if</span>
+                            <span className='text-yellow ml-1'>{`(`}</span>
+                            <span>!</span>
+                            <span className='text-biru ml-1'>confidence</span>
+                            <span className='text-yellow ml-1'>{`)`}</span>
+                            <span className='text-yellow ml-1'>{`{`}</span>
+                        </span>
+                        <br />
+                        <span className='hover:bg-lightComment cursor-pointer px-2'>
+                            <span className='text-biru ml-1'>life</span>
+                            <span className='ml-1'>.</span>
+                            <span className='text-yellow ml-1'>setMode</span>
+                            <span className='text-yellow ml-1'>{`(`}</span>
+                            <span className='text-biru ml-1'>Modes.</span>
+                            <span className='text-yellow ml-1'>Hard</span>
+                            <span className='text-yellow ml-1'>{`)`}</span>
+                        </span>
+                        <br />
+                        <span className='text-yellow ml-4'>{`}`}</span>
+                    </div>
+                    <div>
+                        <span className='hover:bg-lightComment cursor-pointer px-2'>
+                            <span className='text-biru ml-1'>anxiety</span>
+                            <span className='ml-1'>.</span>
+                            <span className='text-yellow ml-1'>addEventListener</span>
+                            <span className='text-yellow ml-1 mr-1'>{`(`}</span>
+                            <span className='text-yellow ml-1'>{`(`}</span>
+                            <span className='ml-1'>thought</span>
+                            <span className='text-yellow ml-1'>{`)`}</span>
+                            <span className='text-biru ml-1 '> {`=> `}</span>
+                        </span>
+                        <span className='hover:bg-lightComment cursor-pointer px-2'>
+                            <span className='ml-1'>thought</span>
+                            <span className='ml-1'>.</span>
+                            <span className='text-biru ml-1'>observe( )</span>
+                            <span className='text-yellow ml-1'> {`)`}</span>
+                        </span>
+                    </div>
+                    <div>
+                        <span className='hover:bg-lightComment cursor-pointer px-2'>
+                            <span className='text-biru ml-1'>workHard</span>
+                            <span className='ml-1'>.</span>
+                            <span className='text-ungu ml-1'>then</span>
+                            <span className='text-ungu ml-1'>{`(`}</span>
+                            <span className='text-yellow ml-1'>workSmart</span>
+                            <span className='text-ungu ml-1'>{`)`}</span>
+                        </span>
+                    </div>
                 </motion.div>
                 <motion.div className='text-white w-full flex flex-col 2xl:gap-10 gap-4 justify-center p-2'
                     initial="hidden"
