@@ -44,14 +44,14 @@ const About = () => {
     // --cyan: #56B6C2;
     return (
         <motion.div className='flex w-full' >
-            <motion.div className='container md:mx-auto p-5 grid grid-cols-1 md:grid-cols-2 justify-around 2xl:gap-5 mx-5 xl:p-5 xl:gap-5'
+            <motion.div className='container md:mx-auto p-5 grid grid-cols-1 md:grid-cols-2 justify-around gap-5 2xl:gap-5 mx-5 xl:p-5 xl:gap-5'
                 ref={ref}
                 id='About'
             >
-                <motion.div className='text-white text-2xl flex flex-col px-20 justify-center gap-5' animate={animationLeft}
+                <motion.div className='text-white text-2xl flex flex-col px-20 justify-center gap-5 items-center lg:items-start' animate={animationLeft}
                 >
                     <div>
-                        <span className='hover:bg-lightComment cursor-pointer px-2'>
+                        <span className='hover:bg-lightComment cursor-pointer px-2 text-xl lg:text-3xl'>
                             <span className='text-ungu ml-1 '>if</span>
                             <span className='text-yellow ml-1'>{`(`}</span>
                             <span>!</span>
@@ -60,7 +60,7 @@ const About = () => {
                             <span className='text-yellow ml-1'>{`{`}</span>
                         </span>
                         <br />
-                        <span className='hover:bg-lightComment cursor-pointer px-2'>
+                        <span className='hover:bg-lightComment cursor-pointer px-2 text-xl lg:text-3xl'>
                             <span className='text-biru ml-1'>life</span>
                             <span className='ml-1'>.</span>
                             <span className='text-yellow ml-1'>setMode</span>
@@ -73,7 +73,7 @@ const About = () => {
                         <span className='text-yellow ml-4'>{`}`}</span>
                     </div>
                     <div>
-                        <span className='hover:bg-lightComment cursor-pointer px-2'>
+                        <span className='hover:bg-lightComment cursor-pointer px-2 text-xl lg:text-3xl'>
                             <span className='text-biru ml-1'>anxiety</span>
                             <span className='ml-1'>.</span>
                             <span className='text-yellow ml-1'>addEventListener</span>
@@ -83,7 +83,7 @@ const About = () => {
                             <span className='text-yellow ml-1'>{`)`}</span>
                             <span className='text-biru ml-1 '> {`=> `}</span>
                         </span>
-                        <span className='hover:bg-lightComment cursor-pointer px-2'>
+                        <span className='hover:bg-lightComment cursor-pointer px-2 text-xl lg:text-3xl'>
                             <span className='ml-1'>thought</span>
                             <span className='ml-1'>.</span>
                             <span className='text-biru ml-1'>observe( )</span>
@@ -91,7 +91,7 @@ const About = () => {
                         </span>
                     </div>
                     <div>
-                        <span className='hover:bg-lightComment cursor-pointer px-2'>
+                        <span className='hover:bg-lightComment cursor-pointer px-2 text-xl lg:text-3xl'>
                             <span className='text-biru ml-1'>workHard</span>
                             <span className='ml-1'>.</span>
                             <span className='text-ungu ml-1'>then</span>

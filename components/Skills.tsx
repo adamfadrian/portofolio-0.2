@@ -16,7 +16,7 @@ const Skills = () => {
             disableOnInteraction: false
         },
         breakpoints: {
-            320: {
+            375: {
                 slidesPerView: 1,
                 spaceBetween: 20
             },
