@@ -1,35 +1,26 @@
-import React, { useState, FC, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion, } from 'framer-motion'
+import React, { FC } from 'react'
 import { TbDownload } from 'react-icons/tb'
 import { BOUNCING_ANIMATION_VARIANTS } from '@/lib/constant/animation'
+import useScroll from '@/lib/hooks/use-scroll'
+import { useCvModal } from '../cv-modal'
 
 interface Props {
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  children: React.ReactNode
 }
+const Layout: FC<Props> = ({ children }) => {
+  const scrolled = useScroll(20)
 
-const Navbar: FC<Props> = ({ onClick }) => {
-  const [isScrolled, setIsScrolled] = useState<boolean>(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 80) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const { CvModal, setShowCvModal } = useCvModal()
 
   return (
-    <>
+    <div className='bg-blue'>
+      <CvModal />
       <motion.div
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         exit={{ y: -100 }}
-        transition={{ duration: 0.6, ease: 'easeInOut' }} className={`navbar 2xl:px-44 md:px-20 transition duration-700 z-50 items-center sticky top-0 ${isScrolled ? 'bg-purple' : 'bg-transparent'
+        transition={{ duration: 0.6, ease: 'easeInOut' }} className={`navbar 2xl:px-44 md:px-20 transition duration-700 z-50 items-center sticky top-0 ${scrolled ? 'bg-purple' : 'bg-transparent'
           }`} >
         <motion.div className="navbar-start">
           <a href='' className="btn btn-ghost normal-case text-xl"><span className=" text-2xl font-semibold whitespace-nowrap dark:text-white text-black playfair">Adam Fadrian</span></a>
@@ -54,7 +45,7 @@ const Navbar: FC<Props> = ({ onClick }) => {
           </motion.ul>
         </motion.div>
         <motion.div className='navbar-end'>
-          <motion.button className='btn btn-sm bg-transparent border border-white hover:bg-transparent hover:border-blue gap-1' onClick={onClick}>
+          <motion.button className='btn btn-sm bg-transparent border border-white hover:bg-transparent hover:border-blue gap-1' onClick={() => setShowCvModal(true)}>
             <motion.span
               variants={BOUNCING_ANIMATION_VARIANTS}
               initial="initial"
@@ -66,8 +57,11 @@ const Navbar: FC<Props> = ({ onClick }) => {
             Resume</motion.button>
         </motion.div>
       </motion.div>
-    </>
+      <main className="flex flex-col w-full py-36 justify-center">
+        {children}
+      </main>
+    </div>
   )
 }
 
-export default Navbar
+export default Layout

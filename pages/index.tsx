@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Layout from '@/components/Layout'
+import Layout from '@/components/layout/Layout'
 import About from '@/components/About'
 import Navbar from '@/components/Navbar'
 import { useEffect, useRef, useState } from 'react'
-import Modal from '@/components/Modal'
+import Modal from '@/components/shared/Modal'
 import { motion } from 'framer-motion'
-import { BOUNCING_ANIMATION_VARIANTS } from '@/constant/animation'
+import { BOUNCING_ANIMATION_VARIANTS } from '@/lib/constant/animation'
 import { TbDownload } from 'react-icons/tb'
 import Skills from '@/components/Skills'
 import Contacts from '@/components/Contacts'
@@ -72,43 +72,6 @@ export default function Home() {
   return (
 
     <Layout>
-      {/* Modal For Download Resume */}
-      <Modal onClose={closeModal} showModal={showModal}>
-        <div className='flex flex-col gap-8 '>
-          <div className='gap-2 flex flex-col'>
-            <h1 className='font-semibold mx-auto text-xl text-center text-blue'>Choose Type of CV You need!</h1>
-            <h2 className='flex w-96 mx-auto text-center mt-2 text-blue'>ATS Version is for CV which ATS friendly. And Creative version for creative CV with colors.</h2>
-          </div>
-          <div className='flex flex-row justify-center items-center gap-4'>
-            <Link href={'https://drive.google.com/file/d/1Xrkb3itNoBwLz5RpoTnslwzUcXG5K2he/view?pli=1'} target='_blank' className="btn btn-outline text-white bg-purple gap-1 hover:bg-purple " >
-              <span className="inline-block">
-                <motion.span
-                  variants={BOUNCING_ANIMATION_VARIANTS}
-                  initial="initial"
-                  animate="animate"
-                  style={{ display: "inline-block", marginTop: '5px' }}
-                >
-                  <TbDownload size={20} />
-                </motion.span>
-              </span>ATS version
-            </Link >
-            <Link href={'https://drive.google.com/file/d/1lthvIdGuzQicPzJpMGThgMtxV5Vq_vDd/view'} target='_blank' className="btn btn-outline text-white bg-purple gap-1 hover:bg-purple" >
-              <span className="inline-block">
-                <motion.span
-                  variants={BOUNCING_ANIMATION_VARIANTS}
-                  initial="initial"
-                  animate="animate"
-                  style={{ display: "inline-block", marginTop: '5px' }}
-                >
-                  <TbDownload size={20} />
-                </motion.span>
-              </span>Creative Version</Link>
-          </div>
-        </div>
-      </Modal>
-      {/* Modal End */}
-
-      <Navbar onClick={openModal} />
       <About />
       <Skills />
       <Projects />

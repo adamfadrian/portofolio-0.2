@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
-import Layout from './Layout'
+import Layout from './layout/Layout'
 import Image from 'next/image'
 import davekoz from '@/public/selftaut.png'
 import Link from 'next/link'
 import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
-import { FADE_DOWN_ANIMATION_VARIANTS } from '@/constant/animation'
+import { FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/constant/animation'
 
 const About = () => {
     const animationLeft = useAnimation();
