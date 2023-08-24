@@ -105,7 +105,7 @@ const Projects = () => {
         <div className='grid grid-cols-1 md:grid-cols-2  gap-20'>
           <div className='flex flex-col w-full  px-5 gap-5 justify-center'>
             <h1 className='text-4xl text-white font-bold' data-aos='fade-right' data-aos-duration='600' data-aos-anchor-placement="bottom-bottom">Movie App</h1>
-            <p className='text-lg text-white' data-aos='fade-right' data-aos-duration='700' data-aos-anchor-placement="center-bottom">My movie app is a simple web platform that retrieves movie data from the TMDB API using the GET method. It was built with React and Axios, and is perfect for movie enthusiasts looking to stay updated on the latest releases.</p>
+           <p className='text-lg text-white' data-aos='fade-right' data-aos-duration='700' data-aos-anchor-placement="center-bottom">My movie app is a simple web platform that retrieves movie data from the TMDB API using the GET method. It was built with React and Axios, and is perfect for movie enthusiasts looking to stay updated on the latest releases.</p>
             <div className='text-white flex gap-10 hover:cursor-pointer'>
               <div data-aos="fade-up-right" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom">
                 <Link href={'https://mymovie-app-sable.vercel.app'} target='_blank' className='flex gap-2 items-center' >
@@ -135,3 +135,35 @@ const Projects = () => {
 }
 
 export default Projects
+
+
+const project = [
+  {
+    id: 1,
+    title: 'Lapak-UMKM',
+    description: 'LapakUMKM is a platform designed to assist micro, small, and medium-sized enterprises (MSMEs) in Indonesia to market their products online. This platform brings together customers and local products from various regions in Indonesia.',
+    image: Lapak,
+    link: 'https://github.com/ALTA-LapakUMKM-Group-2/LapakUMKM-FE'
+  },
+  {
+    id: 2,
+    title: 'Escapist-App',
+    description: 'Escape to Indonesia with Escapist - the web platform for unique vacation experiences. Browse and book cozy cottages and luxurious villas, and get personalized recommendations for your perfect getaway.',
+    image: escapist,
+    link: 'https://github.com/GP3-group1/ALTA-Airbnb-FE'
+  },
+  {
+    id: 3,
+    title: 'Immersive Dashboard',
+    description: 'Alterra dashboard is a project for cloning the Altera dashboard website. This is my first project in which I collaborated with a backend developer and implemented the CRUD method.',
+    image: dashboard,
+    link: 'https://github.com/GP2-Team3/ALTA-Dashboard'
+  },
+  {
+    id: 4,
+    title: 'Movie-app',
+    description: 'My movie app is a simple web platform that retrieves movie data from the TMDB API using the GET method. It was built with React and Axios, and is perfect for movie enthusiasts looking to stay updated on the latest releases.',
+    image: movie,
+    link: 'https://github.com/adamfadrian/mymovie-app'
+  }
+]

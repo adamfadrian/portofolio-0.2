@@ -14,24 +14,16 @@ import Projects from '@/components/Projects'
 import Footer from '@/components/Footer'
 import { ToastContainer } from 'react-toastify'
 import { TfiArrowCircleUp } from 'react-icons/tfi'
-import Link from 'next/link'
-
+import Test from '@/components/test'
+import useScroll from '@/lib/hooks/use-scroll'
 const inter = Inter({ subsets: ['latin'] })
 
 const RESUME_FILE_PDF = 'http://localhost:3000/ATS.pdf';
 const RESUM_CREATIVE_PDF = 'http://localhost:3000/CREATIVE.pdf';
 
 export default function Home() {
-  const [showModal, setShowModal] = useState<boolean>(false)
   const scrollRef = useRef<HTMLDivElement>(null)
 
-  // open and Close modal for Resume
-  const openModal = () => {
-    setShowModal(true)
-  }
-  const closeModal = () => {
-    setShowModal(false)
-  }
 
   //Local Download
   const downloadResume = (url: any) => {
@@ -44,24 +36,6 @@ export default function Home() {
     document.body.removeChild(download);
   };
 
-  const scrollTop = () => {
-    if (scrollRef.current) {
-      const scroll = scrollRef.current
-      if (window.scrollY > 700) {
-        scroll.style.visibility = 'visible'
-        scroll.style.opacity = '1'
-      } else {
-        scroll.style.visibility = 'hidden'
-        scroll.style.opacity = '0'
-      }
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', scrollTop)
-    return () => window.removeEventListener('scroll', scrollTop)
-  }, [])
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -69,14 +43,15 @@ export default function Home() {
     });
   };
 
+  const scrolled = useScroll(700)
   return (
-
     <Layout>
       <About />
       <Skills />
       <Projects />
+      <Test />
       <Contacts />
-      <div className='block fixed right-5 bottom-10 2xl:right-20 2xl:bottom-20 text-white rounded-full cursor-pointer' style={{ visibility: 'hidden', opacity: '0' }} ref={scrollRef} onClick={scrollToTop}>
+      <div className={`block fixed right-5 bottom-10 2xl:right-20 2xl:bottom-20 text-white rounded-full cursor-pointer ${scrolled ? 'visible opacity-100' : 'hidden opacity-0'}`} onClick={scrollToTop}>
         <TfiArrowCircleUp size={40} />
       </div>
       <Footer />
